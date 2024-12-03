@@ -1,0 +1,408 @@
+*{
+    margin:0;
+    padding:0; 
+    font-family:'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background:black;
+    color:#fff;
+}
+.header{
+    width:100%;
+    height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding:10px 8%;
+    position:relative;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 0;
+    height:600;
+}
+
+.logo{
+    width:150px;
+    cursor:pointer;
+}
+
+nav button{
+    border:0;
+    outline:0;
+    background: #db0001;
+    color:#fff;
+    padding:7px;
+    font-size:16px; 
+    border-radius:4px;
+    margin-left:70%;
+    cursor:pointer;
+
+}
+
+.langause{
+    color:black;
+    
+}
+
+select{
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    background:transparent;
+    border:1px solid #ffff;
+    padding:7px 10px;
+}
+  
+
+/*  */
+.header-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%); 
+    text-align:center;
+    margin-top:100px;
+}
+
+.header-content h1{
+    font-size:50px;
+    line-height: 70px;
+    font-weight: 600px;
+    max-width:650px;
+}
+
+.header-content h3{
+    font-weight:400px;
+    margin-bottom: 20px;
+}
+
+.email-signup{
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.email-signup input{
+    flex:1;
+    border:0;
+    outline:0;
+    margin-left:20px;
+}
+
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+/*---------features--------*/
+
+.features, .row {
+    padding: 50px 12px;
+    font-size: 22px;
+    display:flex;
+    width:100%;
+    /* display: flex; */
+    align-items:center;
+    flex-wrap: wrap;
+    padding:50px 0;
+}
+
+    
+
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    padding:40px;
+    /* margin-left: 5px; */
+   
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+}
+.img-col img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.img-col .video-1{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; 
+    height: 200px;
+    pointer-events: none;
+    /* background-color: #fff; */
+}
+
+.img-col .box{
+    border: 2px solid rgba(255,255,255,.25);
+    background-color: black;
+    border-radius: 10px;
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: -22%;
+
+}
+
+.img-col .box .box-shot{
+    width: 18%;
+    margin-left: -0px;
+
+}
+
+
+.img-col .box p{
+    position: absolute;
+    font-size: large;
+    margin-left: 90px;
+}
+
+#a-tag{
+    text-decoration: none;
+}
+
+.img-col .box .download-gif{
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    right: -0px;
+
+}
+
+
+/* video 2 */
+
+.computer {
+    width: 100%;
+    position: relative;
+    z-index: 2; 
+}
+
+.video-2 {
+    position: absolute;
+    top: 15%; 
+    left: 20%; 
+    width: 59%; 
+    height: 40%; 
+    z-index:1;
+    object-fit: cover; 
+    pointer-events: none; 
+    overflow: hidden;
+}
+
+.feature h2{
+    font-size: 50px;
+    font-weight:600px;
+    margin-bottom:20px;
+}
+
+
+
+/* -------------faq----------- */
+
+.faq{
+    padding:10px 12%;
+    text-align:center;
+    font-size:18px;
+}
+
+.faq h2{
+    font-weight: 500px;
+    font-size: 40px;
+}
+
+.according{
+    margin:60px auto;
+    width:100%;
+    max-width:750px;
+}
+
+.according li{
+    list-style:none;
+    width:100px;
+    padding:5px;
+}
+
+.accordion li label {
+    display:flex;
+    align-items:center;
+    padding:20px;
+    font-size:18px; 
+    font-weight:500;
+    background:#303030;
+    margin-bottom:2px;
+    cursor:pointer;
+    position:relative;
+}
+
+label::after{
+    content:'+';
+    font-size: 34px;
+    position:absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display:none;
+} 
+
+.accordion .content{
+    background:#303030;
+    text-align: left;
+    padding:0 20px;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding:30px 20px;
+} 
+
+.accordion input[type="radio"]:checked + label::after{
+    transform:rotate(135deg);
+}
+
+/* input email address */
+
+.address-email p{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.faq .email-signup{
+    max-width: 600px;
+    margin:20px auto 60px;
+ }
+.faq small{
+    font-size:13px;
+ }
+
+ /*-------------footer---------*/
+
+.footer{
+    padding:50px 15% 10px;
+    border-top:6px solid #333;
+    color:#777;
+ }
+
+ .footer h2{
+    font-size: 18px;
+    font-weight:400;
+    margin-bottom:30px;
+ }
+
+.footer .col{
+    flex-basis:25%;
+    flex-grow:1;
+    margin-bottom:20px;
+ } 
+
+
+.footer .col a{
+    display:block;
+    text-decoration: none;
+    color:#777;
+    font-size:14px;
+    margin-bottom:10px;
+ }
+
+.footer .row{
+    align-items:flex-start;
+    padding:10px 0;
+ }
+
+.copyright-text{
+    font-size:14px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+/*----------media-queries-for-small-screen-------*/
+
+@media only screen and(max-width:600px){
+     .logo{
+        width:100px
+    }
+    nav button{
+        padding:5px 10px;
+       
+    }
+    nav .language-{
+        padding:4px 8px;
+    }
+    .header-content{
+        position:unset;
+        transform:none;
+        padding: top 150px;
+    }
+    .header-content h1{
+        font-size:30px;
+    }
+    .email-signup button{
+        font-size:12px;
+        padding:10px 20px;
+    }
+    .text-col,.img-col{
+        flex-basis:100%
+    }
+    .feature h2{
+        font-size:30px;
+    }
+    .features p{
+        font-size:15px;
+    }
+    .row:nth-child(2), .row:nth-child(4){
+        flex-direction:column-reverse;
+    }
+
+    .features .row{
+        padding:10px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq h2{
+        font-size:20px;
+    }
+
+    .accordion .content{
+        font-size:14px;
+    }
+
+    .accordion li label{
+        padding:10px;
+        font-size:14px
+    }
+
+    label::after{
+        font-size:22px;
+    }
+
+}
+
